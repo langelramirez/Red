@@ -28,7 +28,7 @@ const newTablePeriodTxt = `CREATE TABLE IF NOT EXISTS "Period" (
     "periodId"      SERIAL PRIMARY KEY,
     "userId"        INT,
     "createdAt"     TIMESTAMP,
-    "periodLenght"  INT,
+    "periodLength"  INT,
     "cycleLength"   INT,
     "notes"         VARCHAR
 );`;
@@ -40,12 +40,6 @@ db.query(newTablePeriodTxt, (err, sucess) => {
 });
 
 
-
-
-// client.query('SELECT $1::text as message', ['Hello world!'], (err, res) => {
-//   console.log(err ? err.stack : res.rows[0].message) // Hello World!
-//   client.end()
-// })
 
 
 module.exports = db;
